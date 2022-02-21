@@ -7,7 +7,6 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import PicsApiPixabay from './script/searchApi';
 import picsTpl from './handleBars/pics.hbs';
 
-// const lightBox = new SimpleLightbox()
 const picsApiPixabay = new PicsApiPixabay();
 
 const lightbox = new SimpleLightbox('.gallery a', {
@@ -20,9 +19,6 @@ const refs = {
   gallery: document.querySelector('.gallery'),
   loadMoreBtn: document.querySelector('.load-more'),
 };
-
-// const totalPagesCount = picsApiPixabay.getPics();
-// console.log(totalPagesCount);
 
 refs.form.addEventListener('submit', submitBtn);
 refs.loadMoreBtn.addEventListener('click', onLoadMore);
