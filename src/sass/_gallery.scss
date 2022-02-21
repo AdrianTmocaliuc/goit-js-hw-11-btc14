@@ -1,0 +1,20 @@
+.gallery {
+  margin: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  display: grid;
+}
+
+.photo-card {
+  width: 300px;
+  background-color: #adacb0;
+  border-radius: 10px;
+
+  img {
+    width: 100%;
+  }
+  .info {
+    display: flex;
+    text-align: center;
+  }
+}

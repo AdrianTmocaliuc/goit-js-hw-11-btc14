@@ -1,0 +1,13 @@
+.load-pages {
+  text-align: center;
+}
+
+.load-more {
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #4743d2;
+  &.is-hidden {
+    display: none;
+  }
+}
