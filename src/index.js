@@ -37,10 +37,13 @@ async function submitBtn(e) {
     const totalCards = response.totalHits;
     console.log(picsApiPixabay.PER_PAGE);
 
-    if (totalCards > picsApiPixabay.PER_PAGE) {
+    if (totalCards > picsApiPixabay.PER_PAGE && picsApiPixabay.query !== '') {
       refs.loadMoreBtn.classList.remove('is-hidden');
     }
-
+    if (picsApiPixabay.query === '') {
+      Notify.info('Please enter text');
+      return;
+    }
     if (totalCards === 0) {
       Notify.failure('Sorry, there are no images matching your search query. Please try again.');
       return;
@@ -50,7 +53,7 @@ async function submitBtn(e) {
     renderGallery(response);
     lightbox.refresh();
   } catch (err) {
-    console.log(err.message);
+    Notify.failure('Sorry, there are no images matching your search query. Please try again.');
   }
 }
 
