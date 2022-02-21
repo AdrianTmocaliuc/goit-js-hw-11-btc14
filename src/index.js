@@ -41,7 +41,7 @@ async function submitBtn(e) {
     const totalCards = response.totalHits;
     console.log(picsApiPixabay.PER_PAGE);
 
-    if (totalCards >= picsApiPixabay.PER_PAGE) {
+    if (totalCards > picsApiPixabay.PER_PAGE) {
       refs.loadMoreBtn.classList.remove('is-hidden');
     }
 
