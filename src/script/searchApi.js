@@ -4,7 +4,7 @@ axios.defaults.baseURL = 'https://pixabay.com/api/';
 export default class PicApiPixabay {
   API_KEY = '23808150-51820317ad7670f55f1a98c8b';
   PARAMS = 'image_type=photo&orientation=horizontal&safesearch=true';
-  PER_PAGE = 40;
+  PER_PAGE = 10;
   constructor() {
     this.searchQuery = '';
     this.page = 1;
